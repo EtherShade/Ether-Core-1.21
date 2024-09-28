@@ -27,5 +27,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SILVER_ORE.get())
                 .add(ModBlocks.SILVER_DEEPSLATE_ORE.get());
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.COBBLED_DIORITE_WALL.get())
+                .add(ModBlocks.COBBLED_ANDESITE_WALL.get())
+                .add(ModBlocks.COBBLED_GRANITE_WALL.get());
     }
 }

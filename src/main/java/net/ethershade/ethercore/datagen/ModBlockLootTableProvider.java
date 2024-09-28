@@ -26,6 +26,25 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.COBBLED_DIORITE.get());
+        dropSelf(ModBlocks.COBBLED_ANDESITE.get());
+        dropSelf(ModBlocks.COBBLED_GRANITE.get());
+
+        dropSelf(ModBlocks.COBBLED_DIORITE_STAIRS.get());
+        dropSelf(ModBlocks.COBBLED_ANDESITE_STAIRS.get());
+        dropSelf(ModBlocks.COBBLED_GRANITE_STAIRS.get());
+
+        this.add(ModBlocks.COBBLED_DIORITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.COBBLED_DIORITE_SLAB.get()));
+        this.add(ModBlocks.COBBLED_ANDESITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.COBBLED_ANDESITE_SLAB.get()));
+        this.add(ModBlocks.COBBLED_GRANITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.COBBLED_GRANITE_SLAB.get()));
+
+        dropSelf(ModBlocks.COBBLED_DIORITE_WALL.get());
+        dropSelf(ModBlocks.COBBLED_ANDESITE_WALL.get());
+        dropSelf(ModBlocks.COBBLED_GRANITE_WALL.get());
+
         dropSelf(ModBlocks.SILVER_BLOCK.get());
         dropSelf(ModBlocks.RAW_SILVER_BLOCK.get());
 
