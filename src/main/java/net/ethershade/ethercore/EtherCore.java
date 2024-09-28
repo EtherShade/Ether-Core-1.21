@@ -1,6 +1,9 @@
 package net.ethershade.ethercore;
 
 import com.mojang.logging.LogUtils;
+import net.ethershade.ethercore.block.ModBlocks;
+import net.ethershade.ethercore.item.ModCreativeModeTabs;
+import net.ethershade.ethercore.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,10 +28,13 @@ public class EtherCore {
 
     public EtherCore() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
 
